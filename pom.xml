@@ -1,0 +1,167 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.comcast.pantry</groupId>
+    <artifactId>pantry</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>(Comcast) ${project.artifactId}</name>
+    <inceptionYear>2015</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>Apache License</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Comcast</name>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Kevin Pearson</name>
+            <organization>Comcast</organization>
+        </developer>
+        <developer>
+            <name>Matt Barbour</name>
+            <organization>Comcast</organization>
+        </developer>
+        <developer>
+            <name>Clark Malmgren</name>
+            <organization>GrubHub</organization>
+        </developer>
+    </developers>
+
+    <properties>
+        <!-- Compilation Info -->
+        <java.compile.version>1.7</java.compile.version>
+
+        <!-- Dependency Versions -->
+        <apache.commons.version>1.9</apache.commons.version>
+        <log4j.version>1.2.17</log4j.version>
+        <spring.version>4.1.6.RELEASE</spring.version>
+        <easymock.version>3.3.1</easymock.version>
+        <testng.version>6.8.8</testng.version>
+
+        <!-- Plugin Versions -->
+        <gmaven.plugin.version>1.5</gmaven.plugin.version>
+        <maven.source.plugin.version>2.3</maven.source.plugin.version>
+        <maven.javadoc.plugin.version>2.10.1</maven.javadoc.plugin.version>
+        <maven.plugin.license.version>2.11</maven.plugin.license.version>
+
+        <!-- Github Info -->
+        <!-- TODO Replace this when we move to gh.com -->
+        <git.url>github.comcast.com</git.url>
+        <git.repo>pantry</git.repo>
+        <git.org>cookery</git.org>
+    </properties>
+
+    <scm>
+        <connection>scm:git:git@${git.url}:${git.org}/${git.repo}.git</connection>
+        <developerConnection>scm:git:git@${git.url}:${git.org}/${git.repo}.git</developerConnection>
+        <url>https://${git.url}/${git.org}/${git.repo}</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.compile.version}</source>
+                    <target>${java.compile.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>${maven.plugin.license.version}</version>
+                <configuration>
+                    <header>LICENSE_TEMPLATE.txt</header>
+                    <properties>
+                        <owner>Comcast Cable Communications Management, LLC</owner>
+                    </properties>
+                    <excludes>
+                        <exclude>README.md</exclude>
+                        <exclude>NOTICE.txt</exclude>
+                        <exclude>LICENSE.txt</exclude>
+                        <exclude>CONTRIBUTING.txt</exclude>
+                        <exclude>.travis.yml</exclude>
+                        <exclude>pom.xml</exclude>
+                        <exclude>src/test/resources/**</exclude>
+                    </excludes>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${apache.commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <version>${easymock.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
