@@ -51,6 +51,7 @@
         <maven.source.plugin.version>2.3</maven.source.plugin.version>
         <maven.javadoc.plugin.version>2.10.1</maven.javadoc.plugin.version>
         <maven.plugin.license.version>2.11</maven.plugin.license.version>
+        <maven.gpg.version>1.6</maven.gpg.version>
         
         <!-- Release Control -->
         <autoReleaseAfterClose>false</autoReleaseAfterClose>
