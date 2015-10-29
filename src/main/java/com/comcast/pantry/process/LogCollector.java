@@ -52,7 +52,7 @@ public class LogCollector implements LogConsumer {
 
     /*
      * (non-Javadoc)
-     * @see com.comcast.cvs.common.process.LogConsumer#logLine(java.lang.String)
+     * @see com.comcast.common.process.LogConsumer#logLine(java.lang.String)
      */
     public void logLine(String line) {
         std.append(line + '\n');
@@ -60,7 +60,7 @@ public class LogCollector implements LogConsumer {
 
     /*
      * (non-Javadoc)
-     * @see com.comcast.cvs.common.process.LogConsumer#logErrorLine(java.lang.String)
+     * @see com.comcast.common.process.LogConsumer#logErrorLine(java.lang.String)
      */
     public void logErrorLine(String line) {
         (combined ? std : err).append(line + '\n');

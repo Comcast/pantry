@@ -148,7 +148,7 @@ public class JavaProcessFactory extends ProcessFactory {
 
     /*
      * (non-Javadoc)
-     * @see com.comcast.cvs.common.process.ProcessFactory#getCommandList()
+     * @see com.comcast.common.process.ProcessFactory#getCommandList()
      */
     @Override
     public List<String> getCommandList() {
