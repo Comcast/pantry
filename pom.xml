@@ -59,10 +59,9 @@
         <autoReleaseAfterClose>false</autoReleaseAfterClose>
 
         <!-- Github Info -->
-        <!-- TODO Replace this when we move to gh.com -->
-        <git.url>github.comcast.com</git.url>
+        <git.url>github.com</git.url>
         <git.repo>pantry</git.repo>
-        <git.org>cookery</git.org>
+        <git.org>comcast</git.org>
     </properties>
 
     <scm>
