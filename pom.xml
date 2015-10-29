@@ -3,7 +3,7 @@
 
     <groupId>com.comcast.pantry</groupId>
     <artifactId>pantry</artifactId>
-    <version>2.0.8</version>
+    <version>2.0.9-SNAPSHOT</version>
     <name>(Comcast) ${project.artifactId}</name>
     <inceptionYear>2015</inceptionYear>
     <description>Pantry is a collection of helpful java utilities for use in multi-threaded applications</description>
@@ -60,7 +60,7 @@
         <connection>scm:git:git@${git.url}:${git.org}/${git.repo}.git</connection>
         <developerConnection>scm:git:git@${git.url}:${git.org}/${git.repo}.git</developerConnection>
         <url>https://${git.url}/${git.org}/${git.repo}</url>
-        <tag>pantry-2.0.8</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
