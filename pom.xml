@@ -48,13 +48,6 @@
         <easymock.version>3.3.1</easymock.version>
         <testng.version>6.8.8</testng.version>
 
-        <!-- Plugin Versions -->
-        <gmaven.plugin.version>1.5</gmaven.plugin.version>
-        <maven.source.plugin.version>2.3</maven.source.plugin.version>
-        <maven.javadoc.plugin.version>2.10.1</maven.javadoc.plugin.version>
-        <maven.plugin.license.version>2.11</maven.plugin.license.version>
-        <maven.gpg.version>1.6</maven.gpg.version>
-        
         <!-- Release Control -->
         <autoReleaseAfterClose>false</autoReleaseAfterClose>
 
@@ -111,7 +104,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>${maven.source.plugin.version}</version>
+                <version>2.3</version>
                 <executions>
                     <execution>
                         <goals>
@@ -124,7 +117,7 @@
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
-                <version>${maven.plugin.license.version}</version>
+                <version>2.11</version>
                 <configuration>
                     <header>LICENSE_TEMPLATE.txt</header>
                     <properties>
@@ -162,7 +155,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven.javadoc.plugin.version}</version>
+                        <version>2.10.1</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
@@ -175,7 +168,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven.gpg.version}</version>
+                        <version>1.6</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
