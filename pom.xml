@@ -81,7 +81,7 @@
                                 <resource>
                                     <directory>${project.basedir}</directory>
                                     <includes>
-                                        <include>LICENSE.txt</include>
+                                        <include>LICENSE</include>
                                         <include>NOTICE.txt</include>
                                     </includes>
                                 </resource>
@@ -125,7 +125,7 @@
                     <excludes>
                         <exclude>README.md</exclude>
                         <exclude>NOTICE.txt</exclude>
-                        <exclude>LICENSE.txt</exclude>
+                        <exclude>LICENSE</exclude>
                         <exclude>CONTRIBUTING.txt</exclude>
                         <exclude>.travis.yml</exclude>
                         <exclude>pom.xml</exclude>
