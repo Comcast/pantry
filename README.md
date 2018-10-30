@@ -1,4 +1,4 @@
-Pantry
+Pantry - This project is no longer actively maintained. 
 ======
 [![Build Status](https://travis-ci.org/Comcast/pantry.svg)](https://travis-ci.org/Comcast/pantry)
 
